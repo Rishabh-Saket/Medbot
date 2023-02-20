@@ -1,0 +1,340 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: inform
+  examples: |
+    - I have [Skin rash](symptom_skin_rash)
+    - I have a [spots](symptom_skin_rash) on my skin
+    - there are some [rashes on my skin](symptom_skin_rash)
+    - I have [Nodal skin eruptions](symptom)
+    - I have [continuous sneezing](symptom)	
+    - I have [shivering](symptom)	
+    - I have [chills](symptom)	
+    - I have [joint pain](symptom)
+    - I have [stomach pain](symptom)	
+    - I have [acidity](symptom)	
+    - I have [ulcers on tongue](symptom)	
+    - I have [muscle wasting](symptom)	
+    - I have [vomiting](symptom)	
+    - I have [burning micturition](symptom)	
+    - I have [spotting urination](symptom)
+    - I have [fatigue](symptom)	
+    - I have [weight gain](symptom)	
+    - I have [anxiety](symptom)	
+    - I have [cold hands and feets](symptom)	
+    - I have [mood swings](symptom)	
+    - I have [weight loss](symptom)	
+    - I have [restlessness](symptom)	
+    - I have [lethargy](symptom)	
+    - I have [patches in throat](symptom)	
+    - I have [irregular sugar level](symptom)	
+    - I have [cough](symptom)	
+    - I have [high fever](symptom)
+    - I have [sunken eyes](symptom)	
+    - I have [breathlessness](symptom)	
+    - I have [sweating](symptom)	
+    - I have [dehydration](symptom)	
+    - I have [indigestion](symptom)	
+    - I have [headache](symptom)	
+    - I have [yellowish skin](symptom)	
+    - I have [dark urine](symptom)	
+    - I have [nausea](symptom)	
+    - I have [loss of appetite](symptom)	
+    - I have [pain behind the eyes](symptom)	
+    - I have [back pain](symptom)	
+    - I have [constipation](symptom)	
+    - I have [abdominal pain](symptom)
+    - I have [diarrhoea](symptom) 
+    - I have [mild fever](symptom)	
+    - I have [yellow urine](symptom)	
+    - I have [yellowing of eyes](symptom)	
+    - I have [acute liver failure](symptom)	
+    - I have [fluid overload](symptom)	
+    - I have [swelling of stomach](symptom)	
+    - I have [swelled lymph nodes](symptom)	
+    - I have [malaise](symptom)	
+    - I have [blurred and distorted vision](symptom)	
+    - I have [phlegm](symptom)	
+    - I have [throat irritation](symptom)	
+    - I have [redness of eyes](symptom)	
+    - I have [sinus pressure](symptom)
+    - I have [runny nose](symptom)	
+    - I have [congestion](symptom)	
+    - I have [chest pain](symptom)	
+    - I have [weakness in limbs](symptom)	
+    - I have [fast heart rate](symptom)	
+    - I have [pain during bowel movements](symptom)	
+    - I have [pain in anal region](symptom)	
+    - I have [bloody stool](symptom)	
+    - I have [irritation in anus](symptom)	
+    - I have [neck pain](symptom)	
+    - I have [dizziness](symptom)	
+    - I have [cramps](symptom)	
+    - I have [bruising](symptom)
+    - I have [obesity](symptom)	
+    - I have [swollen legs](symptom)	
+    - I have [swollen blood vessels](symptom)	
+    - I have [puffy face and eyes](symptom)	
+    - I have [enlarged thyroid](symptom)	
+    - I have [brittle nails](symptom)	
+    - I have [swollen extremeties](symptom)	
+    - I have [excessive hunger](symptom)	
+    - I have [extra marital contacts](symptom)	
+    - I have [drying and tingling lips](symptom)	
+    - I have [slurred speech](symptom)	
+    - I have [knee pain](symptom)	
+    - I have [hip joint pain](symptom)	
+    - I have [muscle weakness](symptom)	
+    - I have [stiff neck](symptom)
+    - I have [swelling joints](symptom)	
+    - I have [movement stiffness](symptom)	
+    - I have [spinning movements](symptom)	
+    - I have [loss of balance](symptom)	
+    - I have [unsteadiness](symptom)	
+    - I have [weakness of one body side](symptom)	
+    - I have [loss of smell](symptom)	
+    - I have [bladder discomfort](symptom)	
+    - I have [foul smell of urine](symptom)	
+    - I have [continuous feel of urine](symptom)	
+    - I have [passage of gases](symptom)	
+    - I have [internal itching](symptom)	
+    - I have [toxic look](symptom)	
+    - I have [depression](symptom)	
+    - I have [irritability](symptom)	
+    - I have [muscle pain](symptom)
+    - I have [altered sensorium](symptom)	
+    - I have [red spots over body](symptom)	
+    - I have [belly pain](symptom)	
+    - I have [abnormal menstruation](symptom)	
+    - I have [dischromic patches](symptom)	
+    - I have [watering from eyes](symptom)	
+    - I have [increased appetite](symptom)	
+    - I have [polyuria](symptom)	
+    - I have [family history](symptom)	
+    - I have [mucoid sputum](symptom)	
+    - I have [rusty sputum](symptom)	
+    - I have [lack of concentration](symptom)	
+    - I have [visual disturbances](symptom)	
+    - I have [receiving blood transfusion](symptom)	
+    - I have [receiving unsterile injections](symptom)	
+    - I have [coma](symptom)	
+    - I have [stomach bleeding](symptom)
+    - I have [distention of abdomen](symptom)	
+    - I have [history of alcohol consumption](symptom)	
+    - I have [fluid overload](symptom)	
+    - I have [blood in sputum](symptom)	
+    - I have [prominent veins on calf](symptom)	
+    - I have [palpitations](symptom)	
+    - I have [painful walking](symptom)	
+    - I have [pus filled pimples](symptom)	
+    - I have [blackheads](symptom)	
+    - I have [scurring](symptom)	
+    - I have [skin peeling](symptom)	
+    - I have [silver like dusting](symptom)	
+    - I have [small dents in nails](symptom)	
+    - I have [inflammatory nails](symptom)	
+    - I have [blister](symptom) 
+    - I have [red sore around nose](symptom)	
+    - I have [yellow crust ooze](symptom)
+    - i have [redness of eyes](symptom)
+    - I also feel [chills](symptom)
+    - I also feel [silver like dusting](symptom)
+    - I also feel [pus filled pimples](symptom)
+    - I also feel [belly pain](symptom)
+    - I also feel [blood in sputum](symptom)
+    - I also feel [congestion](symptom)
+    - I also feel [pain behind the eyes](symptom)
+    - I also feel [scurring](symptom)
+    - I also feel [receiving unsterile injections](symptom)
+    - I also feel [mood swings](symptom)
+    - [phlegm](symptom)
+    - [inflammatory nails](symptom)
+    - [yellow crust ooze](symptom)
+    - [blood in sputum](symptom)
+    - [palpitations](symptom)
+    - [lack of concentration](symptom)
+    - [extra marital contacts](symptom)
+    - [irregular sugar level](symptom)
+    - [history of alcohol consumption](symptom)
+    - [sinus pressure](symptom)
+    - [Skin rash](symptom_skin_rash)
+    - [breathlessness](symptom)
+    - [Nodal skin eruptions](symptom)
+    - [red spots over body](symptom)
+    - [muscle pain](symptom)
+    - [coma](symptom)
+    - i also have [cough](symptom)
+    - i also have [Nodal skin eruptions](symptom)
+    - I also have [distention of abdomen](symptom)
+    - I also have [internal itching](symptom)
+    - I also have [polyuria](symptom)
+    - I also have [passage of gases](symptom)
+    - I also have [puffy face and eyes](symptom)
+    - I also have [back pain](symptom)
+    - I also have [vomiting](symptom)
+    - I also have [painful walking](symptom)
+    - I also have [scurring](symptom)
+    - I also have [lethargy](symptom)
+    - I also have [swollen extremeties](symptom)
+    - I have [cough](symptom) and [phlegm](symptom)
+    - I have [stomach pain](symptom) and [chest pain](symptom)
+    - I have [receiving blood transfusion](symptom) and [altered sensorium](symptom)
+    - I have [toxic look](symptom) and [loss of smell](symptom)
+    - I have [irritability](symptom) and [fluid overload](symptom)
+    - I have [pain behind the eyes](symptom) and [phlegm](symptom)
+    - I have [bladder discomfort](symptom) and [dizziness](symptom)
+    - I have [altered sensorium](symptom) and [continuous feel of urine](symptom)
+    - I have [red spots over body](symptom) and [polyuria](symptom)
+    - I have [scurring](symptom) and [painful walking](symptom)
+    - sometimes I also feel like [burning micturition](symptom) also
+    - sometimes I also feel like [belly pain](symptom) also
+    - sometimes I also feel like [bladder discomfort](symptom) also
+    - sometimes I also feel like [swollen blood vessels](symptom) also
+    - sometimes I also feel like [malaise](symptom) also
+    - sometimes I also feel like [small dents in nails](symptom) also
+    - sometimes I also feel like [nausea](symptom) also
+    - I also sometimes feel like [vomiting](symptom)
+    - I also sometimes feel like [distention of abdomen](symptom)
+    - I also sometimes feel like [weakness in limbs](symptom)
+    - I also sometimes feel like [hip joint pain](symptom)
+    - I also sometimes feel like [diarrhoea](symptom)
+    - I have a symptom called [mild fever](symptom)
+    - I have a symptom called [cough](symptom)
+    - I have a symptom called [red spots over body](symptom)
+    - I have a symptom called [prominent veins on calf](symptom)
+    - I have a symptom called [stiff neck](symptom)
+    - The symptoms i have are [anxiety](symptom), [acidity](symptom) and [fatigue](symptom)
+    - The symptoms i have are [blister](symptom), [family history](symptom) and [red spots over body](symptom)
+    - The symptoms i have are [continuous feel of urine](symptom), [distention of abdomen](symptom) and [blackheads](symptom)
+    - The symptoms i have are [fluid overload](symptom), [belly pain](symptom) and [altered sensorium](symptom)
+    - The symptoms i have are [excessive hunger](symptom), [drying and tingling lips](symptom) and [coma](symptom)
+    - I have symptom [coma](symptom), [irritability](symptom) and [visual disturbances](symptom)
+    - I have symptom [Cold hands and feets](symptom), [sweating](symptom) and [spotting urination](symptom)
+    - I have symptom [drying and tingling lips](symptom), [swollen extremeties](symptom) and [mood swings](symptom)
+    - I have symptom [brittle nails](symptom), [anxiety](symptom) and [redness of eyes](symptom)
+    - I have [cold hands and feets](symptom), [cough](symptom), and [chest pain](symptom)
+    - I think I am feeling [irregular sugar level](symptom)
+    - I think I am feeling [loss of balance](symptom)
+    - I think I am feeling [indigestion](symptom)
+    - I think I am feeling [movement stiffness](symptom)
+    - I am feeling [runny nose](symptom) in my body
+    - I am feeling [mood swings](symptom) in my body
+    - I am feeling [hip joint pain](symptom) in my body
+    - I am feeling [cramps](symptom) in my body
+    - I have [foul smell of urine](symptom) and [back pain](symptom)
+    - I have [bladder discomfort](symptom) and [throat irritation](symptom)
+    - I have [toxic look](symptom) and [continuous sneezing](symptom)
+    - I have [constipation](symptom) and [phlegm](symptom)
+    - I'm [shivering](symptom)
+    - I'm [stomach bleeding](symptom)
+    - I'm [patches in throat](symptom)
+    - I'm [Nodal skin eruptions](symptom)
+    - I have [toxic look](symptom), [constipation](symptom) and [cold hands and feets](symptom)
+    - I have very [high fever](symptom) in my body
+
+- intent: check_symptoms
+  examples: |
+    - I am not feeling well
+    - check my disease
+    - do i have a disease?
+    - I have some symptoms
+    - I think I am sick
+    - I am not feelin well
+    - but i think i have some disease
+
+- intent: predict_disease
+  examples: |
+    - Predict my disease
+    - which disease I might be having
+    - Okay predict my disease
+    - No, please predict my disease

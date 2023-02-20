@@ -1,0 +1,90 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- inform:
+    use_entities: true
+- check_symptoms:
+    use_entities: true
+- predict_disease:
+    use_entities: true
+entities:
+- symptom
+- symptom_skin_rash
+slots:
+  symptom:
+    type: rasa.shared.core.slots.ListSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  symptom_skin_rash:
+    type: rasa.shared.core.slots.ListSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_say_again:
+  - text: I'm sorry, I didn't quite understand that what you said. Could you say it again?
+  utter_default:
+  - text: I'm sorry, I didn't quite understand that. Could you say it again?
+  utter_check_for_symptoms:
+  - custom:
+      data:
+      - label: cough
+        value: /inform{'slot_name':'cough'}
+      - label: fatigue
+        value: /inform{'slot_name':'fatigue'}
+      - label: sweating
+        value: /inform{'slot_name':'sweating'}
+      payload: dropDown
+  - text: Please select a option
+  utter_disease_prediction:
+  - text: You have a high chance of having {name}, Get it checked and take medicines
+  utter_final_ask_for_symptoms:
+  - text: Do you have more symptoms other than this?
+  - text: Do you feel anything else in your body?
+  - text: Do you have any more symtoms to share?
+  utter_ask_for_symptoms2:
+  - text: Please tell me what other symptoms are you feeling?
+  utter_final_ask_for_prediction:
+  - text: Should I predict the disease with all the above symptoms?
+  utter_ask_for_symptoms:
+  - text: Can you tell me your symptoms
+  - text: What are the symptoms you are having
+  - text: Can you name some symptoms. that you are having
+actions:
+- action_check_for_symptoms
+forms: {}
+e2e_actions: []
